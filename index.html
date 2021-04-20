@@ -18,19 +18,19 @@
             <!-- Start Slider -->
             <div class="slider">
                 <!-- Start Arrow -->
-                <div class="arrow">
+                <div class="arrow" @click="prevImage">
                     <i class="fas fa-chevron-left"></i>
                 </div>
                 <!-- End Arrow -->
 
                 <!-- Start Images -->
                 <div class="images">
-                    <img src="img/campagna.jpg" alt="">
+                    <img :src="linksImages[activeImage]" alt="">
                 </div>
                 <!-- End Images -->
 
                 <!-- Start Arrow -->
-                <div class="arrow">
+                <div class="arrow" @click="nextImage">
                     <i class="fas fa-chevron-right"></i>
                 </div>
                 <!-- End Arrow -->
@@ -39,16 +39,7 @@
 
             <!-- Start Circles -->
             <div class="circles">
-                <span class="circle active">
-                    <i class="fas fa-circle"></i>
-                </span>
-                <span class="circle">
-                    <i class="fas fa-circle"></i>
-                </span>
-                <span class="circle">
-                    <i class="fas fa-circle"></i>
-                </span>
-                <span class="circle">
+                <span v-for="(image, index) in linksImages"  class="circle" :class="{ active: activeImage == index }">
                     <i class="fas fa-circle"></i>
                 </span>
             </div>
