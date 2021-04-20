@@ -6,12 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Slider</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-    
+    <div id="root">
+        <!-- Start Slider Container -->
+        <div class="slider-container">
+            <!-- Start Slider -->
+            <div class="slider">
+                <!-- Start Arrow -->
+                <div class="arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <!-- End Arrow -->
+
+                <!-- Start Images -->
+                <div class="images">
+                    <img src="img/campagna.jpg" alt="">
+                </div>
+                <!-- End Images -->
+
+                <!-- Start Arrow -->
+                <div class="arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <!-- End Arrow -->
+            </div>
+            <!-- End Slider -->
+
+            <!-- Start Circles -->
+            <div class="circles">
+                <span class="circle active">
+                    <i class="fas fa-circle"></i>
+                </span>
+                <span class="circle">
+                    <i class="fas fa-circle"></i>
+                </span>
+                <span class="circle">
+                    <i class="fas fa-circle"></i>
+                </span>
+                <span class="circle">
+                    <i class="fas fa-circle"></i>
+                </span>
+            </div>
+            <!-- End Circles -->
+
+        </div>
+        <!-- End Slider Container -->
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>

@@ -1,0 +1,51 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* END RESET */
+
+/* MAIN */
+img{
+    width: 100%;
+    display: block;
+}
+
+.slider-container{
+    max-width: 80%;
+    margin: 40px auto;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+}
+
+.slider .images{
+    padding: 0 30px;
+}
+
+.slider .arrow{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.circles{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 100px;
+}
+.circles .circle{
+    color: #fff;
+    padding: 5px;
+}
+.circles .circle.active{
+    color: blue;
+}
+/* END MAIN */
