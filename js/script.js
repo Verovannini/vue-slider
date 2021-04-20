@@ -2,7 +2,9 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            // Imposto l'indice dell'img di default
             activeImage: 0,
+            // Creo array con i paths delle immagini
             linksImages: [
                 'img/campagna.jpg',
                 'img/cascate.webp',
@@ -11,6 +13,7 @@ var app = new Vue(
             ]
         },
         methods: {
+            // Creo una funzione che mostri l'immagine sucessiva quando si fa click sulla freccia destra
             nextImage() {
                 const nextImageIndex = this.activeImage + 1;
 
@@ -20,6 +23,8 @@ var app = new Vue(
                     this.activeImage = nextImageIndex;
                 }
             },
+
+            // Creo una funzione che mostri l'immagine precedente quando si fa click sulla freccia sinistra
             prevImage() {
                 const prevImageIndex = this.activeImage - 1;
 
@@ -30,11 +35,12 @@ var app = new Vue(
                 }
             }
         },
+
+        // Creo una timing function che fa andare avanti lo slider ogni 3 secondi
         created() {
            setInterval( () => {
             this.nextImage();
-           }  
-            ,3000); 
+           } ,3000); 
         }
     }
 );
